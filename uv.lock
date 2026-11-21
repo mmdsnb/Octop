@@ -2593,11 +2593,13 @@ version = "1.0.3b7"
 source = { editable = "." }
 dependencies = [
     { name = "acme" },
+    { name = "agent-client-protocol" },
     { name = "apscheduler" },
     { name = "argon2-cffi" },
     { name = "boto3" },
     { name = "click" },
     { name = "cryptography" },
+    { name = "deepagents" },
     { name = "edge-tts" },
     { name = "fastapi" },
     { name = "firecrawl-anydoc" },
@@ -2685,12 +2687,14 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "acme", specifier = ">=5.6.0" },
+    { name = "agent-client-protocol", specifier = ">=0.11.0" },
     { name = "apscheduler", specifier = ">=3.10,<4" },
     { name = "argon2-cffi", specifier = ">=23.1" },
     { name = "boto3", specifier = ">=1.40.61" },
     { name = "build", marker = "extra == 'dev'", specifier = ">=1.0" },
     { name = "click", specifier = ">=8.1" },
     { name = "cryptography", specifier = ">=41" },
+    { name = "deepagents", specifier = ">=0.7.35,<0.7.41" },
     { name = "edge-tts", specifier = ">=6.1" },
     { name = "fastapi", specifier = ">=0.110" },
     { name = "fastembed", marker = "extra == 'local-embedding'", specifier = ">=0.4" },

@@ -438,7 +438,7 @@ def _acp_sdk_error() -> str:
     except ImportError as exc:
         return (
             f"ACP SDK is not installed ({type(exc).__name__}: {exc}); "
-            "install agent-client-protocol>=0.11.0"
+            "install agent-client-protocol>=0.11.0,<1.0"
         )
     missing = [name for name in _ACP_RUNTIME_SYMBOLS if not hasattr(module, name)]
     if not missing:
@@ -446,8 +446,9 @@ def _acp_sdk_error() -> str:
     location = getattr(module, "__file__", "") or "unknown path"
     return (
         f"incompatible ACP SDK at {location}: missing {', '.join(missing)}. "
-        "Uninstall any unrelated 'acp' distribution and install "
-        "agent-client-protocol>=0.11.0."
+        "Octop requires agent-client-protocol>=0.11.0,<1.0; 1.0 removed "
+        "these symbols. If an unrelated 'acp' distribution is installed, "
+        "uninstall it as well."
     )
 
 

@@ -179,7 +179,7 @@ def test_acp_sdk_error_reports_missing_runtime_symbols(
     )
     error = acp_host._acp_sdk_error()
     assert "text_block" in error
-    assert "agent-client-protocol>=0.11.0" in error
+    assert "agent-client-protocol>=0.11.0,<1.0" in error
 
 
 @pytest.mark.asyncio
